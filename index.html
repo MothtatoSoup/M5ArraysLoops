@@ -11,16 +11,17 @@ let words = ["I","Greatly","Dislike","JavaScript"];
 a sentence (adding spaces between words), and 
 outputs the result to '<p id="output"><p>' innerHTML */
 function generateSentence() {
+    let sentance = "";
     for(i in words){
-        let sentance = "";
-        sentance = i + " ";
+        sentance += words[i] + " ";
+        console.log(sentance)
     }
-    document.getElementById("output") = sentance
+    document.getElementById("output").innerHTML = sentance;
 }
 /* Add an event listener to generateBtn.
 When clicked, the generateBtn should execute 
 the generateSentence function, displaying the sentence. */
-document.getElementById("generateBtn").addEventListener("click",generateSentence())
+document.getElementById("generateBtn").addEventListener("click",generateSentence());
 </script>
 </body>
 </html>
